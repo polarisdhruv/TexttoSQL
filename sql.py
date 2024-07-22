@@ -1,47 +1,47 @@
-import sqlite3
+# import sqlite3
 
 
-##Connect to sqlite
-connection = sqlite3.connect("student.db")
+# ##Connect to sqlite
+# connection = sqlite3.connect("student.db")
 
 
-## Create a cursor object to insert record, create table , retreieve
+# ## Create a cursor object to insert record, create table , retreieve
 
-cursor =  connection.cursor()
-
-
-## create the table 
-
-table_info = """
-Create table Student(Name varchar(25), CLASS varchar(25), SECTION varchar(25), MARKS INT)
-"""
-
-cursor.execute(table_info)
+# cursor =  connection.cursor()
 
 
-# Insert data into the table
+# ## create the table 
+
+# table_info = """
+# Create table Student(Name varchar(25), CLASS varchar(25), SECTION varchar(25), MARKS INT)
+# """
+
+# cursor.execute(table_info)
 
 
-cursor.execute(''' Insert Into Student values('krish', 'Data Science', 'A', 90)''')
-cursor.execute(''' Insert Into Student values('Abhay', 'Data Science', 'B', 90)''')
-cursor.execute(''' Insert Into Student values('Rohit', 'Development', 'C', 90)''')
-cursor.execute(''' Insert Into Student values('Vikas', 'Devops', 'A', 80)''')
-cursor.execute(''' Insert Into Student values('Vayu', 'Devops', 'A', 86)''')
+# # Insert data into the table
 
 
-## Display all the records 
+# cursor.execute(''' Insert Into Student values('krish', 'Data Science', 'A', 90)''')
+# cursor.execute(''' Insert Into Student values('Abhay', 'Data Science', 'B', 90)''')
+# cursor.execute(''' Insert Into Student values('Rohit', 'Development', 'C', 90)''')
+# cursor.execute(''' Insert Into Student values('Vikas', 'Devops', 'A', 80)''')
+# cursor.execute(''' Insert Into Student values('Vayu', 'Devops', 'A', 86)''')
 
-print("The inserted records are:")
 
-data = cursor.execute(''' SELECT * From STUDENT''')
+# ## Display all the records 
 
-for row in data:
-    print(row)
+# print("The inserted records are:")
 
-### Close the connection
-connection.commit()
+# data = cursor.execute(''' SELECT * From STUDENT''')
 
-connection.close()
+# for row in data:
+#     print(row)
+
+# ### Close the connection
+# connection.commit()
+
+# connection.close()
 
 
 

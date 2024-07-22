@@ -1,0 +1,1 @@
+web: streamlit run app2.py --server.port=5000 --server.enableCORS=false
