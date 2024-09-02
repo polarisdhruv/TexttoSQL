@@ -54,3 +54,5 @@ This project is a Text-to-SQL application built using Streamlit that allows user
 
 Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
 
+
+
